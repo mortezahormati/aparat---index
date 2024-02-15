@@ -205,7 +205,89 @@
                     <div class="row  ">
 
                         <div class="col-md-12 ">
-                            <div class="row justify-content-between  ">
+                            <div class="row mb-3">
+                                <div class="col-md-2 ">
+                                    <h6>ویژه‌های آپارات
+                                    </h6>
+                                </div>
+                                <div class="col-md-8"></div>
+                                <div class="col-md-2"></div>
+
+                            </div>
+                            <div class="row justify-content-around  ">
+                                <div class="card" style="width: 18%;">
+                                    <video
+                                            poster="https://static.cdn.asset.aparat.cloud/avt/57279991-5075-l__3632.jpg?width=300&quality=90&secret=FlWOqJWqfdFpQl27IzJ8cQ"
+                                            class="video-play"
+                                            src="https://static.cdn.asset.aparat.com/avt/57279991_15s.mp4">
+                                    </video>
+                                    <div class="card-body">
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18%;">
+                                    <video
+                                            poster="https://static.cdn.asset.aparat.cloud/avt/57279991-5075-l__3632.jpg?width=300&quality=90&secret=FlWOqJWqfdFpQl27IzJ8cQ"
+                                            class="video-play"
+                                            src="https://static.cdn.asset.aparat.com/avt/57279991_15s.mp4">
+                                    </video>
+                                    <div class="card-body">
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18%;">
+                                    <video
+                                            poster="https://static.cdn.asset.aparat.cloud/avt/57279991-5075-l__3632.jpg?width=300&quality=90&secret=FlWOqJWqfdFpQl27IzJ8cQ"
+                                            class="video-play"
+                                            src="https://static.cdn.asset.aparat.com/avt/57279991_15s.mp4">
+                                    </video>
+                                    <div class="card-body">
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18%;">
+                                    <video
+                                            poster="https://static.cdn.asset.aparat.cloud/avt/57279991-5075-l__3632.jpg?width=300&quality=90&secret=FlWOqJWqfdFpQl27IzJ8cQ"
+                                            class="video-play"
+                                            src="https://static.cdn.asset.aparat.com/avt/57279991_15s.mp4">
+                                    </video>
+                                    <div class="card-body">
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18%;">
+                                    <video
+                                            poster="https://static.cdn.asset.aparat.cloud/avt/57279991-5075-l__3632.jpg?width=300&quality=90&secret=FlWOqJWqfdFpQl27IzJ8cQ"
+                                            class="video-play"
+                                            src="https://static.cdn.asset.aparat.com/avt/57279991_15s.mp4">
+                                    </video>
+                                    <div class="card-body">
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mt-5 ">
+                            <div class="row mb-3">
+                                <div class="col-md-2 ">
+                                    <h6>آپارات موزیک
+                                    </h6>
+                                </div>
+                                <div class="col-md-8"></div>
+                                <div class="col-md-2">
+                                    <a href="https://www.aparat.com/music" class="sc-crHmcD hGcAgb button" aria-label="left" data-list-more-link="true" data-size="small">
+                                        <div class="content"><span class="text">ورود به آپارات موزیک</span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="row justify-content-around  ">
                                 <div class="card" style="width: 18%;">
                                     <video
                                             poster="https://static.cdn.asset.aparat.cloud/avt/57279991-5075-l__3632.jpg?width=300&quality=90&secret=FlWOqJWqfdFpQl27IzJ8cQ"
@@ -274,15 +356,33 @@
 <script src="assets/jquery-3.5.1.slim.min.js"></script>
 <script src="assets/bootstrap.bundle.js"></script> <!-- Menu Toggle Script -->
 <script>
-    $(document).ready(function () {
-        $(".video-play").on("mouseover", function (event) {
-            this.play();
+    // $(document).ready(function () {
+    //     $(".video-play").on("mouseover", function (event) {
+    //         this.play();
+    //
+    //     }).on('mouseout', function (event) {
+    //         this.pause();
+    //
+    //
+    //     });
+    // })
 
-        }).on('mouseout', function (event) {
-            this.pause();
 
+        $(document).on("mouseover",".video-play", function (event) {
+            console.log(event.target);
+            if(event.target.src != null){
+                this.play()
+
+            }
         });
-    })
+    $(document).on("mouseout",".video-play", function (event) {
+        this.load()
+        // var r = $('.video-play').attr('poster' ,  event.target.poster);
+        // r.play();
+        // console.log(z);
+        // this.show(event.target.poster);
+    });
+
 
 
     $(function () {
